@@ -1,0 +1,13 @@
+apiVersion: network.edgefarm.io/v1alpha1
+kind: EdgeNetwork
+metadata:
+  name: edge-network-acme
+  labels:
+    app: edge-network-acme
+spec:
+  nodeSelector: 
+    project: acme
+  network: test-network-def-acme
+  limits:
+    fileStorage: 10G
+    inMemoryStorage: 1G

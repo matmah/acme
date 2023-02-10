@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "acme"
+  annotations:
+    backstage.io/kubernetes-label-selector: 'app=edge-network-acme'
+    argocd/app-name: acme
+  links:
+    - url: https://www.ci4rail.com
+      title: Ci4Rail Website
+      icon: backstage
+spec:
+  type: EdgeNetwork
+  owner: user:default/keduri
+  lifecycle: experimental

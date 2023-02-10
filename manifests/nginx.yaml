@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 'edge-network-nginx-acme'
+  labels:
+    app: 'edge-network-acme'
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: 'edge-network-acme'
+  template:
+    metadata:
+      labels:
+        app: 'edge-network-acme'
+    spec:
+      containers:
+        - name: 'edge-network-nginx-acme'
+          image: nginx:latest
+          imagePullPolicy: Always
